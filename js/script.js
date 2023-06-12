@@ -8,7 +8,6 @@ const jump = () =>{
         mario.classList.remove('jump');}
         , 500);
 }
-
 const loop = setInterval(() => {
 
     console.log (loop)
@@ -24,16 +23,23 @@ const loop = setInterval(() => {
         mario.style.animation='none';
         mario.style.bottom= `${marioPosition}px`;
 
-        clouds.style.animation='none';
-
+        clouds.style.animationPlayState = 'paused';
+        
         mario.src = './images/game-over.png';
         mario.style.width = '75px'
         mario.style.marginLeft = '50px'
 
-        clearInterval(loop)
-
+        clearInterval(loop);
     }
 
 }, 10);
 
-document.addEventListener('keydown', jump)
+document.addEventListener('keydown', (event) => {
+    if (event.code === 'Space') {
+        jump();
+    }
+});
+
+function reset(){
+    window.location.reload();
+}

@@ -8,11 +8,27 @@
 .game-board {
     width: 100%;
     height: 500px;
-    border-bottom: 15px solid rgb(35, 160, 35);
+    border-bottom: 15px solid #00c800;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(#87ceeb, #e0f6ff);
+    background-image: url("../images/SNES\ -\ Super\ Mario\ World\ -\ Yoshis\ Island\ 2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:skyblue;
+}
+.text-container {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.instruction {
+    font-size: 24px;
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .pipe {
     position: absolute;
@@ -34,6 +50,35 @@
     position: absolute;
     animation: clouds-animation 20s infinite linear;
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+button {
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 
 @keyframes pipe-animation {
     from {
